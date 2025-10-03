@@ -1,9 +1,10 @@
 :root {
   --color-orange: #f14d34;
+  --color-main-black: #040613;
 }
 
 :root {
-  --font-default-size: min(2vw, 15px);
+  --font-default-size: min(2.5vw, 14px);
 }
 
 body,
@@ -16,6 +17,7 @@ ul,
 li,
 button {
   all: unset;
+  color: white;
 }
 
 @font-face {
@@ -23,7 +25,7 @@ button {
   src: url("/src/assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
-html {
+html, body {
   height: 100%;
   min-height: 100%;
   font-family: Montserrat;
@@ -32,7 +34,7 @@ html {
 a,
 p,
 button {
-  font-size: --var(--font-default-size);
+  font-size: var(--font-default-size);
 }
 
 a,
@@ -46,8 +48,12 @@ a:hover {
   
 }
 
+h1, h2 {
+  font-weight: 700;
+}
+
 h1 {
-  font-size: min(6vw, 40px);
+  font-size: min(7vw, 50px);
 }
 
 h2 {

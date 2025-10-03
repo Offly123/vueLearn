@@ -1,11 +1,11 @@
 <template>
-    <header>
+    <!-- <header>
         <Navbar />
         <HeaderMain />
         <video src="/src/assets/images/video.mp4" muted autoplay loop></video>
         <img draggable="false" id="drupalGuy" src="/src/assets/images/druplicon.svg" alt="">
     </header>
-    <MobileMenu />
+    <MobileMenu /> -->
 </template>
 
 <script setup lang="ts">
@@ -21,7 +21,8 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: black;
-    height: 400px;
+    min-height: 650px;
+    height: 100%;
     overflow: hidden;
     color: white;
     width: 100vw;
@@ -45,29 +46,5 @@ video {
     position: absolute;
     z-index: -1;
     left: 0;
-}
-
-@media screen and (min-width: 350px) {
-    header {
-        height: 500px;
-    }
-}
-
-@media screen and (min-width: 400px) {
-    header {
-        height: 700px;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    header {
-        height: 800px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    header {
-        height: 650px;
-    }
 }
 </style>

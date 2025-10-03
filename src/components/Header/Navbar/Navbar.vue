@@ -3,56 +3,50 @@
     <a href="/" id="logo">
         <img src="/src/assets/images/drupal-coder.svg" alt="drupal-coder.png">
     </a>
-    <div id="ul-and-phone">
-        <ul>
-            <li>
-                <a text="ПОДДЕРЖКА САЙТОВ" href="/placeholder">ПОДДЕРЖКА САЙТОВ</a>
-            </li>
-            <li>
-                <a text="ТАРИФЫ" href="/placeholder">ТАРИФЫ</a>
-            </li>
-            <li>
-                <a text="НАШИ РАБОТЫ" href="/placeholder">НАШИ РАБОТЫ</a>
-            </li>
-            <li>
-                <a text="ОТЗЫВЫ" href="/placeholder">ОТЗЫВЫ</a>
-            </li>
-            <li>
-                <a text="КОНТАКТЫ" href="/placeholder">КОНТАКТЫ</a>
-            </li>
-        </ul>
-        <div id="phone-and-lang">
-            <p>8 800 123-12-34</p>
-            <p>RU</p>
-        </div>
+    <div class="phone-and-lang">
+        <p>8 800 123-45-67</p>
+        <p>RU</p>
     </div>
+    <ul class="links">
+        <li>
+            <a href="/placeholder">ПОДДЕРЖКА САЙТОВ</a>
+        </li>
+        <li>
+            <a href="/placeholder">ТАРИФЫ</a>
+        </li>
+        <li>
+            <a href="/placeholder">НАШИ РАБОТЫ</a>
+        </li>
+        <li>
+            <a href="/placeholder">ОТЗЫВЫ</a>
+        </li>
+        <li>
+            <a href="/placeholder">КОНТАКТЫ</a>
+        </li>
+    </ul>
 </nav>
 </template>
 
-<script>
+<script setup lang="ts">
 
 </script>
 
-<style>
+<style scoped>
 nav {
-    display: flex;
+    display: none;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding-top: 20px;
+    margin-top: 20px;
     height: 100px;
     width: 100%;
-    align-items: center;
-    justify-content: flex-start;
     text-wrap: nowrap;
     z-index: 1;
-    --min-padding: 0px;
-    --prefer-padding: 5%;
-    --max-padding: 125px;
-    /* padding-left: clamp(var(--min-padding), var(--prefer-padding), var(--max-padding)); */
-    padding: 10px clamp(var(--min-padding), var(--prefer-padding), var(--max-padding));
 }
 
 nav > #logo {
+    order: 1;
     height: 30%;
     margin-right: 5%;
 }
@@ -61,31 +55,27 @@ nav > #logo {
     height: 100%;
 }
 
-#ul-and-phone {
-    flex: 1;
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-ul {
+ul.links {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    /* margin-right: auto; */
     align-items: center;
-    justify-self: flex-start;
-    height: 100%;
-    transition: all 0.1s;
+    flex-wrap: wrap;
+    justify-content: center;
+    order: 3;
+    height: 20%;
+    width: 100%;
 }
 
-ul > li {
+ul.links > li {
+    display: flex;
     width: fit-content;
-    padding: 10px;
+    align-items: center;
+    padding: 7px 10px;
+    height: 10%;
 }
 
 ul > li > a {
+    font-size: min(2vw, 15px);
     position: relative;
     display: block;
     max-width: max;
@@ -107,25 +97,27 @@ ul > li > a::after {
     bottom: -30%;
     background-color: var(--color-orange);
     opacity: 0;
-    transition: all 0.2s;
+    transition: all 0.1s;
 }
 
 ul > li > a:hover::after {
     opacity: 1;
 }
 
-#phone-and-lang {
+.phone-and-lang {
+    position: relative;
+    order: 2;
     display: flex;
     justify-content: flex-end;
-    flex-wrap: wrap;
+    align-items: center;
     flex: 1;
-    width: auto;
+    /* width: auto; */
 }
 
-#phone-and-lang > p {
+.phone-and-lang > p {
     position: relative;
     font-weight: 500;
-    font-size: calc(var(--font-default-size) * 1.5);
+    font-size: calc(var(--font-default-size) * 1.2);
     --min-padding: 0px;
     --prefer-padding: 5%;
     --max-padding: 20px;
@@ -133,10 +125,42 @@ ul > li > a:hover::after {
     padding-right: clamp(var(--min-padding), var(--prefer-padding), var(--max-padding));
 }
 
-#phone-and-lang > :not(:first-child)::after {
+.phone-and-lang > :not(:first-child)::after {
     display: inline;
     position: absolute;
     content: '⌄';
     top: -20%
+}
+
+.phone-and-lang > :not(:first-child) {
+    font-weight: 600;
+    font-size: calc(var(--font-default-size) * 1.2);
+}
+
+@media screen and (min-width: 1400px) {
+    nav {
+        flex-direction: row !important;
+        justify-content: space-around;
+    }
+
+    .phone-and-lang {
+        position: relative;
+        order: 3;
+    }
+
+    ul.links {
+        order: 2;
+        width: unset;
+    }
+
+    .phone-and-lang > p {
+        font-size: calc(var(--font-default-size) * 1.5);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    nav {
+        display: flex;
+    }
 }
 </style>
