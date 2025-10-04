@@ -250,7 +250,12 @@
 
     bottom: -5%;
     @media screen and (min-width: 1000px) {
+        width: 70%;
         bottom: -10%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 60%;
     }
 }
 
