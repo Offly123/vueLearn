@@ -226,7 +226,7 @@
     position: relative;
     color: white;
     overflow-x: hidden;
-    overflow-x: visible;
+    overflow-y: visible;
     background-image: linear-gradient(90deg, var(--color-main-black), 50%, #090d2a);
     
     padding: 20px;
@@ -256,6 +256,10 @@
 
     @media screen and (min-width: 1200px) {
         width: 60%;
+    }
+
+    @media screen and (min-width: 1400px) {
+        width: 40%;
     }
 }
 
