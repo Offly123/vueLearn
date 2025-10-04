@@ -63,9 +63,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: clamp(0px, 150dvh, 800px);
+    height: clamp(0px, 150dvh, 900px);
     max-width: 80%;
-    margin: clamp(0px, 7vw, 100px) 0 0 clamp(0px, 12vw, 150px);
+    margin: clamp(0px, 7vw, 100px) 0 100px clamp(0px, 12vw, 150px);
 }
 
 #competency > .header {

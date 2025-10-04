@@ -3,7 +3,7 @@
         <Navbar />
         <HeaderMain />
         <video src="/src/assets/images/video.mp4" muted autoplay loop></video>
-        <img draggable="false" id="drupalGuy" src="/src/assets/images/druplicon.svg" alt="druplicon.svg">
+        <img draggable="false" id="drupalGuy" src="/src/assets/images/druplicon.svg " alt="druplicon.svg">
     </header>
     <MobileMenu />
 </template>
@@ -43,9 +43,23 @@ video {
 }
 
 #drupalGuy {
+    filter: brightness(200%);
     position: absolute;
     z-index: -1;
-    left: 0;
+    
+    width: 150%;
+    left: -50%;
+    top: -20%;
+    @media screen and (min-width: 1000px) {
+        width: 100%;
+        left: -25%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+        left: -15%;
+        top: -70%;
+    }
 }
 
 @media screen and (min-width: 350px) {

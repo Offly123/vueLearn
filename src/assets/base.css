@@ -1,6 +1,7 @@
 :root {
   --color-orange: #f14d34;
   --color-main-black: #040613;
+  --color-text-gray: #999;
 }
 
 :root {
@@ -26,7 +27,7 @@ button {
 }
 
 html, body {
-  height: 100%;
+  width: 100vw;
   min-height: 100%;
   font-family: Montserrat;
   background-color: white;
@@ -59,4 +60,8 @@ h1 {
 
 h2 {
   font-size: min(5vw, 30px);
+}
+
+h3 {
+  font-size: min(3vw, 20px);
 }
