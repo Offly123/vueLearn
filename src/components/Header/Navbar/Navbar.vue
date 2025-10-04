@@ -76,7 +76,7 @@ nav {
 nav > #logo {
     order: 1;
     height: 30%;
-    margin-right: 5%;
+    margin-right: clamp(0px, 5%, 30px);
 }
 
 #logo > img {
