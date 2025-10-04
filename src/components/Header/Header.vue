@@ -3,7 +3,7 @@
         <Navbar />
         <HeaderMain />
         <video src="/src/assets/images/video.mp4" muted autoplay loop></video>
-        <img draggable="false" id="drupalGuy" src="/src/assets/images/druplicon.svg" alt="">
+        <img draggable="false" id="drupalGuy" src="/src/assets/images/druplicon.svg" alt="druplicon.svg">
     </header>
     <MobileMenu />
 </template>
@@ -22,6 +22,7 @@ header {
     align-items: center;
     background-color: black;
     height: 400px;
+    min-height: 100dvh;
     overflow: hidden;
     color: white;
     width: 100vw;
@@ -61,6 +62,7 @@ video {
 
 @media screen and (min-width: 1000px) {
     header {
+        min-height: 0px;
         height: 800px;
     }
 }

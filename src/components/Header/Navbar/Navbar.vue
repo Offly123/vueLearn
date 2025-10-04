@@ -41,13 +41,13 @@
             <p>КОНТАКТЫ</p>
             <menu class="hover-menu">
                 <a href="/placeholder">
-                    ЗАПОЛНИТЕЛЬ
+                    LOREM IPSUM
                 </a>
                 <a href="/placeholder">
-                    ЗАПОЛНИТЕЛЬ
+                    DOLOT
                 </a>
                 <a href="/placeholder">
-                    ЗАПОЛНИТЕЛЬ
+                    SIT AMET
                 </a>
             </menu>
         </li>
@@ -104,19 +104,19 @@ ul.links > li {
     height: 10%;
 }
 
-ul > li > a, p {
+ul.links > li > a, p {
     position: relative;
     display: block;
     text-align: center;
 }
 
-ul > li > a:hover, p:hover {
+ul.links > li > a:hover, p:hover {
     /* При жирном тексте элемент становится больше
     и навбар дёргается при наведении */
     /* font-weight: 600; */
 }
 
-ul > li > a::before, p::before {
+ul.links > li > a::before {
     content: '';
     display: block;
     position: absolute;
@@ -128,7 +128,7 @@ ul > li > a::before, p::before {
     transition: all 0.1s;
 }
 
-ul > li.with-menu::after {
+ul.links > li.with-menu::after {
     content: '';
     display: block;
     position: absolute;
@@ -142,11 +142,11 @@ ul > li.with-menu::after {
     transition: all 0.1s;
 }
 
-ul > li.with-menu:hover::after {
+ul.links > li.with-menu:hover::after {
     transform: rotate(0deg);
 }
 
-ul > li > a:hover::before, p:hover::before {
+ul.links > li > a:hover::before {
     opacity: 1;
 }
 
