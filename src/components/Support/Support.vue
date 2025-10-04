@@ -107,7 +107,6 @@
             </div>
         </div>
         <img class="drupal-guy" src="/src/assets/images/druplicon.svg" alt="druplicon.svg">
-        <img class="laptop" src="/src/assets/images/laptop.png" alt="laptop.png">
     </section>
 </template>
 
@@ -121,7 +120,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: shown;
     justify-content: flex-start;
     align-items: center;
     z-index: 1;
@@ -226,29 +224,65 @@
     position: relative;
     color: white;
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow: visible;
     background-image: linear-gradient(90deg, var(--color-main-black), 50%, #090d2a);
     
     padding: 20px;
-    height: 140dvh;
+    height: 120dvh;
     @media screen and (min-width: 1000px) {
         height: 110dvh;
         padding-top: 40px;
     }
 }
 
+#support-dark::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url('/src/assets/images/laptop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: 1 / 1;
+    bottom: -10%;
+    z-index: 1;
+    left: 0;
+    width: 80%;
+
+    @media screen and (min-width: 1000px) {
+        width: 70%;
+        bottom: -10%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 60%;
+    }
+
+    @media screen and (min-width: 1400px) {
+        width: 50%;
+    }
+}
+
 #support-dark > .content {
     display: flex;
     flex-direction: column;
+    position: relative;
     height: 60%;
 }
 
-#support-dark > .laptop {
+#support-dark > .drupal-guy {
     position: absolute;
-    width: 80%;
-    left: 0%;
+    width: 120%;
+    right: 0;
+    bottom: 0px;
+}
 
-    bottom: -5%;
+.content > .cards-dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 70%;
+
     @media screen and (min-width: 1000px) {
         width: 70%;
         bottom: -10%;
@@ -261,21 +295,6 @@
     @media screen and (min-width: 1400px) {
         width: 40%;
     }
-}
-
-#support-dark > .drupal-guy {
-    position: absolute;
-    width: 120%;
-    right: -10%;
-    bottom: 0px;
-}
-
-.content > .cards-dark {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
-    width: 70%;
 }
 
 .cards-dark > .card-dark {
