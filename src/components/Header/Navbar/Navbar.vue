@@ -8,8 +8,25 @@
         <p>RU</p>
     </div>
     <ul class="links">
-        <li>
-            <a href="/placeholder">ПОДДЕРЖКА САЙТОВ</a>
+        <li class="with-menu">
+            <p>ПОДДЕРЖКА САЙТОВ</p>
+            <menu class="hover-menu">
+                <a href="/placeholder">
+                    МИГРАЦИЯ
+                </a>
+                <a href="/placeholder">
+                    БЭКАПЫ
+                </a>
+                <a href="/placeholder">
+                    АУДИТ БЕЗОПАСНОСТИ
+                </a>
+                <a href="/placeholder">
+                    ОПТИМИЗАЦИЯ СКОРОСТИ
+                </a>
+                <a href="/placeholder">
+                    ПЕРЕЕЗД НА HTTPS
+                </a>
+            </menu>
         </li>
         <li>
             <a href="/placeholder">ТАРИФЫ</a>
@@ -20,8 +37,19 @@
         <li>
             <a href="/placeholder">ОТЗЫВЫ</a>
         </li>
-        <li>
-            <a href="/placeholder">КОНТАКТЫ</a>
+        <li class="with-menu">
+            <p>КОНТАКТЫ</p>
+            <menu class="hover-menu">
+                <a href="/placeholder">
+                    ЗАПОЛНИТЕЛЬ
+                </a>
+                <a href="/placeholder">
+                    ЗАПОЛНИТЕЛЬ
+                </a>
+                <a href="/placeholder">
+                    ЗАПОЛНИТЕЛЬ
+                </a>
+            </menu>
         </li>
     </ul>
 </nav>
@@ -68,27 +96,27 @@ ul.links {
 
 ul.links > li {
     display: flex;
+    position: relative;
     width: fit-content;
     align-items: center;
-    padding: 7px 10px;
+    font-size: min(2vw, 15px);
+    padding: 7px 15px;
     height: 10%;
 }
 
-ul > li > a {
-    font-size: min(2vw, 15px);
+ul > li > a, p {
     position: relative;
     display: block;
-    max-width: max;
     text-align: center;
 }
 
-ul > li > a:hover {
+ul > li > a:hover, p:hover {
     /* При жирном тексте элемент становится больше
     и навбар дёргается при наведении */
     /* font-weight: 600; */
 }
 
-ul > li > a::after {
+ul > li > a::before, p::before {
     content: '';
     display: block;
     position: absolute;
@@ -100,7 +128,53 @@ ul > li > a::after {
     transition: all 0.1s;
 }
 
-ul > li > a:hover::after {
+ul > li.with-menu::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: url("/src/assets/images/arrow-down.svg") center no-repeat;
+    background-size: contain;
+    transform: rotate(90deg);
+    transition: all 0.1s;
+}
+
+ul > li.with-menu:hover::after {
+    transform: rotate(0deg);
+}
+
+ul > li > a:hover::before, p:hover::before {
+    opacity: 1;
+}
+
+li > .hover-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 140%;
+    padding: 10px 0px;
+    background-color: var(--color-orange);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.1s;
+}
+
+li > .hover-menu > a {
+    --horizontal-padding: 20px;
+    width: calc(100% - 2 * var(--horizontal-padding));
+    padding: 2px 20px;
+}
+
+li > .hover-menu > a:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+li:hover > .hover-menu {
+    visibility: visible;
     opacity: 1;
 }
 
@@ -135,6 +209,18 @@ ul > li > a:hover::after {
 .phone-and-lang > :not(:first-child) {
     font-weight: 600;
     font-size: calc(var(--font-default-size) * 1.2);
+}
+
+.p-menu {
+    position: absolute !important;
+    background-color: red !important;
+    top: -100% !important;
+}
+
+.p-menu-list {
+    position: absolute !important;
+    background-color: red !important;
+    top: -100% !important;
 }
 
 @media screen and (min-width: 1400px) {
