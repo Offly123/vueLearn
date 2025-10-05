@@ -80,9 +80,9 @@ footer > .d-first {
     left: 0;
     right: 0;
     margin: auto;
-    width: 40%;
     z-index: 0;
-
+    
+    width: 40%;
     @media screen and (min-width: 1200px) {
         width: 20%;
     }
@@ -91,12 +91,12 @@ footer > .d-first {
 footer > .d-second {
     position: absolute;
     filter: brightness(70%);
-    bottom: -75px;
-    right: 0;
     margin: auto;
     width: 40%;
     z-index: 0;
-
+    
+    right: 0;
+    bottom: -75px;
     @media screen and (min-width: 1200px) {
         right: -100px;   
         bottom: -200px;
@@ -104,11 +104,11 @@ footer > .d-second {
 }
 
 footer > .footer-main {
-    padding: 0 15px;
     display: flex;
     flex-direction: column;
     z-index: 1;
-
+    
+    padding: 0 15px;
     @media screen and (min-width: 576px) {
         padding: 0 30px;
     }
@@ -124,6 +124,7 @@ footer > .footer-main {
     flex-direction: column;
     align-items: flex-start;
 
+    width: auto;
     @media screen and (min-width: 992px) {
         width: 50%;
     }
@@ -192,6 +193,7 @@ footer > .footer-main {
     flex-direction: column;
     margin: 50px 0;
 
+    width: auto;
     @media screen and (min-width: 992px) {
         width: 40%;
     }
@@ -226,13 +228,15 @@ form > .send-button {
 footer > .footer-small-text {
     width: 100%;
     border-top: 1px solid rgba(255, 255, 255, .1);
-    padding: 50px 5px 0 5px;
     z-index: 1;
-
+    
+    padding: 50px 5px 0 5px;
+    display: unset;
+    flex-direction: unset;
     @media screen and (min-width: 576px) {
         padding: 50px 30px 0 30px;
     }
-
+    
     @media screen and (min-width: 1200px) {
         display: flex;
         flex-direction: column;
@@ -241,6 +245,8 @@ footer > .footer-small-text {
 
 .footer-small-text > p {
     color: var(--color-text-gray);
+
+    font-size: none;
     @media screen and (min-width: 1200px) {
         font-size: 13px;   
     }
