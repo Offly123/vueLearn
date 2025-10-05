@@ -1,6 +1,6 @@
 <template>
     <header>
-        <Navbar />
+        <NavbarHeader />
         <HeaderMain />
         <video src="/src/assets/images/video.mp4" muted autoplay loop></video>
         <img draggable="false" id="drupalGuy" src="/src/assets/images/druplicon.svg " alt="druplicon.svg">
@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-import Navbar from './Navbar/Navbar.vue';
-import HeaderMain from './HeaderMain/HeaderMain.vue';
-import MobileMenu from './MobileMenu/MobileMenu.vue';
+import NavbarHeader from '../ui/NavbarHeader.vue';
+import HeaderMain from '../sections/HeaderMain.vue';
+import MobileMenu from '../ui/MobileMenu.vue';
 </script>
 
 <style scoped>

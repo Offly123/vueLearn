@@ -1,6 +1,6 @@
 import './assets/main.css'
 
-import { createApp, nextTick } from 'vue'
+import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import PrimeVue from 'primevue/config'
 import Aura from '@primeuix/themes/aura';

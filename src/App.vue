@@ -1,14 +1,16 @@
 <template>
-    <Header />
-    <Competency />
-    <Support />
+    <HeaderLayout />
+    <CompetencySection />
+    <SupportSection />
+    <ExpertiseSection />
 </template>
 
 <script setup lang='ts'>
 
-import Header from './components/Header/Header.vue'
-import Competency from './components/Competency/Competency.vue'
-import Support from './components/Support/Support.vue'
+import HeaderLayout from './components/layout/HeaderLayout.vue';
+import CompetencySection from './components/sections/CompetencySection.vue';
+import ExpertiseSection from './components/sections/ExpertiseSection.vue';
+import SupportSection from './components/sections/SupportSection.vue'
 
 </script>
 
