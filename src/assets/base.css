@@ -1,3 +1,27 @@
+/* 
+
+@media screen and (min-width: 576px) {
+        
+}
+
+@media screen and (min-width: 768px) {
+        
+}
+
+@media screen and (min-width: 992px) {
+        
+}
+
+@media screen and (min-width: 1200px) {
+        
+}
+
+@media screen and (min-width: 1400px) {
+        
+}
+
+*/
+
 :root {
   --color-orange: #f14d34;
   --color-main-black: #040613;
@@ -12,6 +36,9 @@ body,
 html,
 a,
 menu,
+input[type=text],
+input[type=email],
+textarea,
 p,
 h1,
 h2,

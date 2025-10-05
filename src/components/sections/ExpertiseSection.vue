@@ -107,11 +107,8 @@
 }
 
 .content > h1 {
-    width: 100%;
-
-    @media screen and (min-width: 1200px) {
-        width: 600px
-    }
+    width: min(100%, 600px);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .content > .cards {
