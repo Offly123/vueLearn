@@ -82,7 +82,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: min(7vw, 50px);
+  font-size: min(7vw, 3rem);
 }
 
 h2 {
@@ -91,4 +91,8 @@ h2 {
 
 h3 {
   font-size: min(3vw, 20px);
+}
+
+.p-carousel-item {
+  visibility: visible !important;
 }

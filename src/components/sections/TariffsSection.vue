@@ -74,7 +74,7 @@ section {
 
     @media screen and (min-width: 1200px) {
         justify-content: space-between;
-        height: 1000px;    
+        height: 1000px;
     }
 }
 
@@ -100,7 +100,7 @@ section > .cards {
     flex-direction: column;
     @media screen and (min-width: 1200px) {
         flex: 1;
-        width: 1200px;
+        width: 1300px;
         flex-direction: row;   
     }
 }
@@ -109,11 +109,12 @@ section > .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 20px 15px 20px rgba(0, 0, 0, 0.1);
     background-color: white;
     margin: 20px 0;
     width: 100%;
     /* height: 475px; */
-    padding: 10px 10px 30px 10px;
+    padding: 10px 40px 80px 40px;
     border-radius: 5px;
     --color-gray: #eee;
     border: 1px solid var(--color-gray);
@@ -121,7 +122,8 @@ section > .cards {
     transition: all 0.1s;
 
     @media screen and (min-width: 1200px) {
-        width: 30%;
+        width: 32%;
+        padding-top: 50px;
     }
 }
 
