@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="tariffs">
         <img src="/src/assets/images/letter-d.png" alt="">
         <h1>Тарифы</h1>
         <div class="cards">

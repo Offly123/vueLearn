@@ -24,22 +24,9 @@
                         example@mail.mail
                     </h3>
                 </div>
-            </article>
 
-            <form id="form" action="">
-                <input type="text" name="username" id="username" placeholder="Ваше имя">
-                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Телефон">
-                <input type="email" name="email" id="email" placeholder="E-mail">
-                <textarea name="commentary" id="commentary" placeholder="Ваш комментарий"></textarea>
-                <div class="consent">
-                    <input type="checkbox" name="user-consent" id="user-consent">
-                    <label for="user-consent">
-                        Отправляя заявку, я даю согласие на 
-                        обработку своих персональных данных
-                    </label>
-                </div>
-                <button class="send-button" type="submit">СВЯЖИТЕСЬ С НАМИ</button>
-            </form>
+            </article>
+            <FormUI />
         </div>
 
         <div class="footer-small-text">
@@ -55,6 +42,8 @@
 </template>
 
 <script setup lang='ts'>
+import FormUI from '../ui/FormUI.vue';
+
 
 </script>
 
@@ -99,7 +88,7 @@ footer > .d-second {
     bottom: -75px;
     @media screen and (min-width: 1200px) {
         right: -100px;   
-        bottom: -200px;
+        bottom: -50%;
     }
 }
 
@@ -186,43 +175,6 @@ footer > .footer-main {
     right: 110%;
     bottom: 0;
     margin: auto;
-}
-
-.footer-main > form {
-    display: flex;
-    flex-direction: column;
-    margin: 50px 0;
-
-    width: auto;
-    @media screen and (min-width: 992px) {
-        width: 40%;
-    }
-}
-
-form > input {
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid gray;
-    margin: 5px;
-    padding: 15px 20px;
-    /* height: 50px; */
-}
-
-form > textarea {
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid gray;
-    margin: 5px;
-    padding: 15px 20px;
-    height: 100px;
-}
-
-form > .send-button {
-    background-color: var(--color-orange);
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    margin: 5px;
 }
 
 footer > .footer-small-text {

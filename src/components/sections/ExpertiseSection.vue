@@ -69,11 +69,12 @@
     z-index: 1;
     left: 0;
     width: 80%;
-    max-height: 100%;
+    max-height: 30%;
 
     @media screen and (min-width: 1000px) {
         width: 70%;
         bottom: -10%;
+        max-height: 100%;
     }
 
     @media screen and (min-width: 1200px) {
@@ -118,7 +119,7 @@
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    width: 70%;
+    width: 100%;
 
     @media screen and (min-width: 1000px) {
         width: 70%;
@@ -136,7 +137,7 @@
 
 .cards > .card {
     border-left: 3px solid var(--color-orange);
-    margin: 20px 0px;
+    margin: 20px 0px 0 0;
     padding: 5px 15px;
 }
 </style>

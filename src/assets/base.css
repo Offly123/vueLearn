@@ -93,6 +93,7 @@ h3 {
   font-size: min(3vw, 20px);
 }
 
+/* Костыль для отображения галереи */
 .p-carousel-item {
   visibility: visible !important;
 }

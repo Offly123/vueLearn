@@ -3,7 +3,7 @@
         <div class="info-main">
             <h1>Поддержка сайтов на Drupal</h1>
             <p>Сопровождение и поддержка сайтов на CMS Drupal любой версии и запущенности</p>
-            <a href="#placeholder">ТАРИФЫ</a>
+            <a href="#tariffs">ТАРИФЫ</a>
         </div>
         <div class="info-cards">
             <div>
