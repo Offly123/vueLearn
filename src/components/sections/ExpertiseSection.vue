@@ -81,7 +81,9 @@
     }
 
     @media screen and (min-width: 1400px) {
-        width: 50%;
+        max-width: 50%;
+        width: 900px;
+        bottom: -160px;
     }
 }
 
