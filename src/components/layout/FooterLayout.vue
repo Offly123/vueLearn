@@ -26,7 +26,7 @@
                 </div>
             </article>
 
-            <form action="">
+            <form id="form" action="">
                 <input type="text" name="username" id="username" placeholder="Ваше имя">
                 <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Телефон">
                 <input type="email" name="email" id="email" placeholder="E-mail">

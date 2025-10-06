@@ -3,6 +3,9 @@
     <CompetencySection />
     <SupportSection />
     <ExpertiseSection />
+    <TariffsSection />
+    
+    
     <FooterLayout />
 </template>
 
@@ -13,6 +16,7 @@ import HeaderLayout from './components/layout/HeaderLayout.vue';
 import CompetencySection from './components/sections/CompetencySection.vue';
 import ExpertiseSection from './components/sections/ExpertiseSection.vue';
 import SupportSection from './components/sections/SupportSection.vue'
+import TariffsSection from './components/sections/TariffsSection.vue';
 
 </script>
 
